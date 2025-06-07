@@ -1,0 +1,8 @@
+prefix=/home/eric/aev_ws/devel
+
+Name: diffrobot_navigation
+Description: Description of diffrobot_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

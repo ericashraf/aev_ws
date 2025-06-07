@@ -1,0 +1,8 @@
+prefix=/home/eric/aev_ws/install
+
+Name: robot_controller
+Description: Description of robot_controller
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+module2/KrontonBot_Robot/krontonbot_description:module2/KrontonBot_Robot/krontonbot_gazebo:module2/diffrobot_description:module2/diffrobot_gazebo:module3/diffrobot_slam:module4/diffrobot_navigation:module4/krontonbot_navigation :module6/differential_drive_arduino/robot_controller:simple_navigation_goals
+-DCATKIN_DEVEL_PREFIX=/home/eric/aev_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eric/aev_ws/install -G Unix Makefiles

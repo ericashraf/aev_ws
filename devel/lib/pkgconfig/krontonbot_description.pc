@@ -1,0 +1,8 @@
+prefix=/home/eric/aev_ws/devel
+
+Name: krontonbot_description
+Description: Description of krontonbot_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

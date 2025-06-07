@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="krontonbot"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find krontonbot_description)/urdf/krontonbot.gazebo"/>  
+
+  
+  <link name="base_footprint"/>
+    
+  <joint name="base_footprint_joint" type="fixed">
+      <parent link="base_footprint"/>
+      <child link="base_link"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.50658661852854E-05 -0.00201838949928396 0.0587830645165127"
+        rpy="0 0 0" />
+      <mass
+        value="1.17032405036154" />
+      <inertia
+        ixx="0.00559848724155472"
+        ixy="4.88502656787046E-08"
+        ixz="-3.25439864111426E-08"
+        iyy="0.00608461745805045"
+        iyz="1.90242300588512E-07"
+        izz="0.0116529547581839" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-6.2373E-10 5.5317E-10 3.9908E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.035175" />
+      <inertia
+        ixx="1.5237E-05"
+        ixy="3.7076E-10"
+        ixz="5.6702E-14"
+        iyy="1.5237E-05"
+        iyz="-4.8698E-14"
+        izz="2.5786E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.33333 0.33333 0.33333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.11511 -0.02"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="-8.58566384653869E-10 2.46938719472567E-11 3.99077934541466E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0351748274831478" />
+      <inertia
+        ixx="1.52367980613616E-05"
+        ixy="3.6884570954725E-10"
+        ixz="6.9358924941699E-14"
+        iyy="1.52374644129476E-05"
+        iyz="8.10595651503014E-15"
+        izz="2.57858861191368E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.333333333333333 0.333333333333333 0.333333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.11511 -0.02"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_caster">
+    <inertial>
+      <origin
+        xyz="0 0.00262548022336079 0.00782423038311422"
+        rpy="0 0 0" />
+      <mass
+        value="0.138185712842945" />
+      <inertia
+        ixx="1.60956976262129E-05"
+        ixy="3.92875700537699E-21"
+        ixz="1.96593622940958E-20"
+        iyy="2.36807747991614E-05"
+        iyz="3.49950426187175E-06"
+        izz="3.28973005722072E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/front_caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/front_caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_caster_joint"
+    type="fixed">
+    <origin
+      xyz="0.115 0 -0.046"
+      rpy="0.32443 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_caster" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back_caster">
+    <inertial>
+      <origin
+        xyz="0 0.00825298106839455 5.56561112277643E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.138185712842945" />
+      <inertia
+        ixx="1.60956976262129E-05"
+        ixy="-1.92679602198523E-21"
+        ixz="-1.14424002357776E-21"
+        iyy="3.40754530956607E-05"
+        iyz="-3.68962750472638E-09"
+        izz="2.2502622275708E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/back_caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/back_caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_caster_joint"
+    type="fixed">
+    <origin
+      xyz="-0.115 0 -0.046"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_caster" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="0.0057997075979378 0.000258248159108215 0.00393830974523857"
+        rpy="0 0 0" />
+      <mass
+        value="0.14299416543941" />
+      <inertia
+        ixx="4.62524790551721E-05"
+        ixy="2.60135576127013E-07"
+        ixz="3.61046366936411E-06"
+        iyy="7.34989009436628E-05"
+        iyz="-3.52174464670894E-07"
+        izz="0.00010796019652556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0014081 0.0017337 0.2161"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-0.00165543492258302 -0.000107754498746282 0.000448051321485482"
+        rpy="0 0 0" />
+      <mass
+        value="0.000529368756416077" />
+      <inertia
+        ixx="1.3329198677734E-08"
+        ixy="-5.6052563819805E-12"
+        ixz="6.24714695503316E-14"
+        iyy="7.56085396876582E-09"
+        iyz="-7.11330541768256E-19"
+        izz="1.99747900438089E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://krontonbot_description/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.087126 0.00010919 -0.0081915"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
