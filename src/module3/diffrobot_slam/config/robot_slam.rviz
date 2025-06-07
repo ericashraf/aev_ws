@@ -96,7 +96,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        robot_footprint:
+        base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -131,7 +131,7 @@ Visualization Manager:
           Value: true
         right_wheel:
           Value: true
-        robot_footprint:
+        base_footprint:
           Value: true
       Marker Alpha: 1
       Marker Scale: 1
