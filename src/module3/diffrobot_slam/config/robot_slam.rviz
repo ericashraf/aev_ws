@@ -142,7 +142,7 @@ Visualization Manager:
       Tree:
         map:
           odom:
-            robot_footprint:
+            base_footprint:
               base_link:
                 back_caster:
                   {}
