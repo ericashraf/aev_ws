@@ -106,7 +106,7 @@
         <visual name="front_caster_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
             <material name="">
                 <color rgba="1.0 1.0 1.0 1.0"/>
@@ -116,7 +116,7 @@
         <collision>
              <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
         </collision>
     </link>
@@ -137,7 +137,7 @@
         <visual name="back_caster_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
             <material name="">
                 <color rgba="1.0 1.0 1.0 1.0"/>
@@ -147,7 +147,7 @@
         <collision>
            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
         </collision>
     </link>
