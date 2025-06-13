@@ -2,7 +2,7 @@ mobile_robot:
 
     joints_update:
       type: joint_state_controller/JointStateController
-      publish_rate: 500
+      publish_rate: 100
 
     mobile_base_controller:
       type        : "diff_drive_controller/DiffDriveController"
