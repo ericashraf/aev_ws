@@ -16,7 +16,7 @@
 
    <!-- Complementary filter -->
 
-   <node pkg="imu_complementary_filter" type="complementary_filter_node"
+   <!-- <node pkg="imu_complementary_filter" type="complementary_filter_node"
       name="complementary_filter_gain_node" output="screen">
     <param name="do_bias_estimation" value="true"/>
     <param name="do_adaptive_gain" value="true"/>
@@ -33,6 +33,6 @@
     <param name="use_magnetic_field_msg" value="false" />
     <param name="publish_tf" value="false"/>
     <remap from="imu/data_raw" to="imu_data"/>
- </node>
+ </node> -->
 
 </launch>
