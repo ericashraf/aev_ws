@@ -41,5 +41,5 @@
     <remap from="scan" to="$(arg scan_topic)"/>
   </node>
 
-    <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find diffrobot_slam)/config/robot_slam.rviz"/>
+    <!-- <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find diffrobot_slam)/config/robot_slam.rviz"/> -->
 </launch>
