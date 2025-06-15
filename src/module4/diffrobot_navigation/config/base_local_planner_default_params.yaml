@@ -1,30 +1,44 @@
 # DWAPlannerROS:
 #   max_trans_vel: 0.30
-#   min_trans_vel: 0.01
-#   max_vel_x: 0.50
-#   min_vel_x: -0.025
+#   min_trans_vel: 0.1
+
+#   max_vel_x: 0.40
+#   min_vel_x: 0.0
+
 #   max_vel_y: 0.0
 #   min_vel_y: 0.0
+
+#   max_vel_trans: 0.4
+#   min_vel_theta: 0.1 
+#   theta_stopped_vel: 0.1
+
 #   max_rot_vel: 0.30
 #   min_rot_vel: -0.30
-#   acc_lim_x: 1.25
+
+#   acc_lim_x: 1.0   #1.25
 #   acc_lim_y: 0.0
-#   acc_lim_theta: 5
-#   acc_lim_trans: 1.25
+
+#   acc_lim_theta: 2.0   #5
+#   acc_lim_trans: 0.05     #1.25
 
 #   prune_plan: false
 
-#   xy_goal_tolerance: 0.25
-#   yaw_goal_tolerance: 0.1
+#   xy_goal_tolerance: 0.5
+#   yaw_goal_tolerance: 0.3
+
 #   trans_stopped_vel: 0.1
 #   rot_stopped_vel: 0.1
+
 #   sim_time: 3.0
 #   sim_granularity: 0.1
 #   angular_sim_granularity: 0.1
+
 #   path_distance_bias: 34.0
 #   goal_distance_bias: 24.0
+
 #   occdist_scale: 0.05
 #   twirling_scale: 0.0
+
 #   stop_time_buffer: 0.5
 #   oscillation_reset_dist: 0.05
 #   oscillation_reset_angle: 0.2
@@ -39,30 +53,33 @@
 #   restore_defaults: false
 
 
-DWAPlannerROS:
+# DWAPlannerROS:
+
+  
+#DWAPlannerROS:
 
   
 # Robot Configuration Parameters - Kobuki
-  max_vel_x: 0.5 #done 
+  max_vel_x: 0.3 #done 
   min_vel_x: 0.0
 
   max_vel_y: 0.0  # diff drive robot
   min_vel_y: 0.0  # diff drive robot
 
-  max_vel_trans: 0.4 # choose slightly less than the base's capability
-  min_vel_trans: 0.3  # Default : 0.1 , this is the min trans velocity when there is negligible rotational velocity
+  max_vel_trans: 0.3 # choose slightly less than the base's capability
+  min_vel_trans: 0.1  # Default : 0.1 , this is the min trans velocity when there is negligible rotational velocity
   trans_stopped_vel: 0.1
 
   # Warning!
   #   do not set min_trans_vel to 0.0 otherwise dwa will always think translational velocities
   #   are non-negligible and small in place rotational velocities will be created.
 
-  max_vel_theta: 0.5  #done # choose slightly less than the base's capability
-  min_vel_theta: 0.1  #done # this is the min angular velocity when there is negligible translational velocity
+  max_vel_theta: 0.4  #done # choose slightly less than the base's capability
+  min_vel_theta: 0.15  #done # this is the min angular velocity when there is negligible translational velocity
   theta_stopped_vel: 0.1
   
   acc_lim_x: 1.0 #done # maximum is theoretically 2.0, but we 1.0
-  acc_lim_theta: 2.0 #done 
+  acc_lim_theta: 3.0 #done 
   acc_lim_y: 0.0      # diff drive robot
   acc_lim_trans: 0.05 #0.1
 # Goal Tolerance Parameters
@@ -81,7 +98,7 @@ DWAPlannerROS:
   path_distance_bias: 64.0      # 32.0   - weighting for how much it should stick to the global path plan
   goal_distance_bias: 24.0      # 24.0   - wighting for how much it should attempt to reach its goal
   occdist_scale: 0.01            # 0.01   - weighting for how much the controller should avoid obstacles
-  forward_point_distance: 0.325 # 0.325  - how far along to place an additional scoring point
+  forward_point_distance: 0.65 # 0.325  - how far along to place an additional scoring point
   stop_time_buffer: 0.2         # 0.2    - amount of time a robot must stop in before colliding for a valid traj.
   scaling_speed: 0.25           # 0.25   - absolute velocity at which to start scaling the robot's footprint
   max_scaling_factor: 0.2       # 0.2    - how much to scale the robot's footprint when at speed.
