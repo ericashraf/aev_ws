@@ -152,7 +152,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/eric/aev_ws/build/module2/diffrobot_description/cmake_install.cmake")
   include("/home/eric/aev_ws/build/module4/diffrobot_navigation/cmake_install.cmake")
   include("/home/eric/aev_ws/build/module4/krontonbot_navigation /cmake_install.cmake")
-  include("/home/eric/aev_ws/build/simple_navigation_goals/cmake_install.cmake")
+  include("/home/eric/aev_ws/build/module5/simple_navigation_goals/cmake_install.cmake")
   include("/home/eric/aev_ws/build/module6/differential_drive_arduino/robot_controller/cmake_install.cmake")
   include("/home/eric/aev_ws/build/module2/KrontonBot_Robot/krontonbot_description/cmake_install.cmake")
 
