@@ -14,7 +14,7 @@ transform_time_offset: 0.0
 transform_timeout: 0.0
 
 # Whether to broadcast the transformation over the /tf topic. Defaults to true if unspecified.
-publish_tf: false
+publish_tf: true
 
 map_frame: map              # Defaults to "map" if unspecified
 odom_frame: odom            # Defaults to "odom" if unspecified
