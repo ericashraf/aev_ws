@@ -14,7 +14,7 @@
 
 class ROBOTHardwareInterface : public hardware_interface::RobotHW
 {
-public:
+ public:
         ROBOTHardwareInterface(ros::NodeHandle &nh);
         ~ROBOTHardwareInterface();
         void init();
@@ -27,13 +27,13 @@ public:
         rospy_tutorials::Floats joints_pub;
         robot_controller::Floats_array joint_read;
 
-protected:
+ protected:
         hardware_interface::JointStateInterface joint_state_interface_;
         hardware_interface::VelocityJointInterface velocity_joint_interface_;
 
         joint_limits_interface::VelocityJointSaturationInterface velocityJointSaturationInterface;
 
-        std::string joint_name_[2] = {"wheel_left_joint", "wheel_right_joint"};
+        std::string joint_name_[2] = {"wheel_right_joint", "wheel_left_joint"};
         double joint_position_[2];
         double joint_velocity_[2];
         double joint_effort_[2];

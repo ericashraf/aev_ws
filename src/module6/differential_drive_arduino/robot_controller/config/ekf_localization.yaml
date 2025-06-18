@@ -19,7 +19,7 @@ publish_tf: false
 map_frame: map              # Defaults to "map" if unspecified
 odom_frame: odom            # Defaults to "odom" if unspecified
 base_link_frame: base_footprint  # Defaults to "base_link" if unspecified
-# world_frame: odom          # Defaults to the value of odom_frame if unspecified
+world_frame: odom          # Defaults to the value of odom_frame if unspecified
 
 # Complete the odom0 configuration
 odom0: /odom_noise
