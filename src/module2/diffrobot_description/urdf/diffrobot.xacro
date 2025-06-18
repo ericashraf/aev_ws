@@ -106,7 +106,7 @@
         <visual name="front_caster_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.00" length="0.025"/>
             </geometry>
             <material name="">
                 <color rgba="1.0 1.0 1.0 1.0"/>
@@ -116,13 +116,13 @@
         <collision>
              <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
         </collision>
     </link>
 
     <joint name="front_caster_joint" type="fixed">
-        <origin xyz="-0.11 0.275 -0.14" rpy="0.0 1.5705 1.5705"/>
+        <origin xyz="-0.11 0.275 -0.157" rpy="0.0 1.5705 1.5705"/>
         <parent link="base_link"/>
         <child link="front_caster"/>
         <axis xyz="0.0 0.0 1.0"/>
@@ -137,7 +137,7 @@
         <visual name="back_caster_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
             <material name="">
                 <color rgba="1.0 1.0 1.0 1.0"/>
@@ -147,13 +147,13 @@
         <collision>
            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <geometry>
-                <cylinder radius="0.0625" length="0.025"/>
+                <cylinder radius="0.08" length="0.025"/>
             </geometry>
         </collision>
     </link>
 
     <joint name="back_caster_joint" type="fixed">
-       <origin xyz="-0.11 -0.275 -0.14" rpy="0.0 1.5705 1.5705"/>
+       <origin xyz="-0.11 -0.275 -0.157" rpy="0.0 1.5705 1.5705"/>
         <parent link="base_link"/>
         <child link="back_caster"/>
         <axis xyz="0.0 0.0 0.0"/>
@@ -194,7 +194,7 @@
     </link>
 
     <joint name="laser_data_joint" type="fixed">
-        <origin xyz="0.20 0.0 0.13" rpy="0.0 -1.5708 -1.5708"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.5708"/>
         <parent link="lidar_link"/>
         <child link="laser"/>
     </joint>

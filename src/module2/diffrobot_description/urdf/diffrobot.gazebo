@@ -5,7 +5,7 @@
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 
         <!-- Plugin update rate in Hz -->
-        <updateRate>50</updateRate>
+        <updateRate>120</updateRate>
 
         <!-- Name of left joint, defaults to `left_joint` -->
         <leftJoint>wheel_left_joint</leftJoint>
@@ -17,13 +17,13 @@
         <wheelSeparation>0.57</wheelSeparation>
 
         <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
-        <wheelDiameter>0.06</wheelDiameter>
+        <wheelDiameter>0.13</wheelDiameter>
 
         <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
         <wheelAcceleration>1.0</wheelAcceleration>
 
         <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
-        <wheelTorque>20</wheelTorque>
+        <wheelTorque>15</wheelTorque>
 
         <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
         <commandTopic>cmd_vel</commandTopic>
@@ -65,8 +65,8 @@
               <horizontal>
                 <samples>720</samples>
                 <resolution>1</resolution>
-                <min_angle>-3.14159</min_angle>
-                <max_angle>3.14159</max_angle>
+                <min_angle>0</min_angle> -
+                <max_angle>6.28319</max_angle>
               </horizontal>
             </scan>
             <range>
@@ -100,6 +100,10 @@
 	  	<material>Gazebo/Black</material>
 	</gazebo>
 
+  <gazebo reference="laser_link">
+	  	<material>Gazebo/Black</material>
+	</gazebo>
+
     <gazebo reference="front_caster">
         <kp value="10000000.0"/>
         <kd value="1.0"/>
@@ -116,8 +120,30 @@
 	  	<material>Gazebo/Black</material>
 	</gazebo>
 
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
 
-  <gazebo>
+
+  <!-- <gazebo>
+  3.14159 min and max angles
     <plugin name="gazebo_ros_gps" filename="libhector_gazebo_ros_gps.so">
       <updateRate>4.0</updateRate>
       <bodyName>gps_link</bodyName>
@@ -134,5 +160,5 @@
       <velocityDrift>0.001 0.001 0.001</velocityDrift>
       <velocityGaussianNoise>0.5 0.5 0.5</velocityGaussianNoise>
     </plugin>
-  </gazebo>
+  </gazebo> -->
 </diffrobot>
