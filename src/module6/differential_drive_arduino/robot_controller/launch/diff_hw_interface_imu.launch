@@ -15,7 +15,7 @@
 
 
     <!-- change pkg name according to your robot description launch file -->
-  <include file="$(find krontonbot_description)/launch/robot_description.launch"/>
+  <include file="$(find diffrobot_description)/launch/robot_description.launch"/>
   
   <node name="robot_hardware_interface" pkg="robot_controller" type="robot_hardware_interface_node" output="screen">
      <remap from="/mobile_robot/mobile_base_controller/cmd_vel" to="/cmd_vel"/>
